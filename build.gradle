@@ -1,0 +1,29 @@
+group 'us.cnlist'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+def pf_version = '6.1';
+def pf_theme = 'bootstrap';
+def pf_theme_version = '1.0.10'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven{
+        url "http://repository.primefaces.org"
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile "org.primefaces:primefaces:$pf_version"
+    compile "org.primefaces.themes:$pf_theme:$pf_theme_version"
+    compile "com.sun.faces:jsf-api:2.2.5"
+    compile "com.sun.faces:jsf-impl:2.2.5"
+    compile 'org.apache.commons:commons-lang3:3.2.1'
+    compile 'javax.inject:javax.inject:1'
+}
