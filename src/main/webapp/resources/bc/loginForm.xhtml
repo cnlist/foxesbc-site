@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"
+
+        ?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Sergei W Adonev
+  Date: 06/12/2017
+  Time: 20:08
+-->
+
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:cc="http://java.sun.com/jsf/composite"
+                xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <cc:interface>
+
+    </cc:interface>
+
+    <cc:implementation>
+        <p:dialog
+                position="center"
+                widgetVar="login-form"
+                header="Login form"
+        >
+            <h:panelGrid columns="2">
+
+                <h:column>
+                    Login
+                </h:column>
+
+                <h:column>
+                    <p:inputText/>
+                </h:column>
+
+                <h:column>
+                    password
+                </h:column>
+
+                <h:column>
+                    <p:password/>
+                </h:column>
+
+            </h:panelGrid>
+
+            <f:facet name="footer">
+                <p:panel>
+                    <p:commandButton value="Login"/>
+                </p:panel>
+            </f:facet>
+
+        </p:dialog>
+    </cc:implementation>
+
+</ui:composition>

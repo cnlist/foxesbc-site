@@ -11,6 +11,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:bc="http://java.sun.com/jsf/composite/bc"
+      xmlns:p="http://primefaces.org/ui"
       xmlns:h="http://java.sun.com/jsf/html">
 
 <h:head>
@@ -19,7 +20,9 @@
 </h:head>
 
 <h:body>
-
+    <h:form id="dialogForm">
+        <bc:loginForm/>
+    </h:form>
 
 
     <div id="outer">
@@ -40,20 +43,23 @@
 
             </div>
 
-            <div id="splash"></div>
-
-            <div id="menu">
-                <ul>
-                    <li class="first"><a href="#">Home</a></li>
-                    <li><a href="#">Archives</a></li>
-                    <li><a href="#">Links</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+            <div id="splash">
 
             </div>
+            <h:form>
+                <div id="menu">
+                    <ul>
+                        <li class="first"><a href="#">Home</a></li>
+                        <li><a href="#">Archives</a></li>
+                        <li><a href="#">Links</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><p:commandButton value="login" type="button" onclick="PF('login-form').show()"/></li>
+                    </ul>
 
+                </div>
 
+            </h:form>
             <div id="primarycontent">
 
                 <!-- primary content start -->
