@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"
+
+        ?>
+<!--
+  Created by IntelliJ IDEA.
+  User: Sergei W Adonev
+  Date: 06/12/2017
+  Time: 20:08
+-->
+
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:cc="http://java.sun.com/jsf/composite"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+    <cc:interface>
+        <cc:attribute name="header" required="true"/>
+    </cc:interface>
+
+    <cc:implementation>
+        <div class="post">
+
+            <div class="header">
+                <h3>#{cc.attrs.header}</h3>
+                <div class="date"></div>
+            </div>
+            <div class="content">
+                <cc:insertChildren/>
+            </div>
+            <div class="footer">
+                <!--ul>
+                    <li class="printerfriendly"><a href="#">Printer Friendly</a></li>
+                    <li class="comments"><a href="#">Comments (18)</a></li>
+                    <li class="readmore"><a href="#">Read more</a></li>
+                </ul-->
+            </div>
+        </div>
+    </cc:implementation>
+
+</ui:composition>
