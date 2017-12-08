@@ -4,7 +4,7 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
  http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
 
-    <persistence-unit name="uf_pu">
+    <persistence-unit name="uf_pu" transaction-type="JTA">
         <jta-data-source>jdbc/foxes</jta-data-source>
         <class>com.uralfoxes.entity.SystemUser</class>
     </persistence-unit>

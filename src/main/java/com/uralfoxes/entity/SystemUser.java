@@ -2,10 +2,7 @@ package com.uralfoxes.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -15,6 +12,8 @@ public class SystemUser implements Serializable {
 
     @Id
     @Column(name = "id")
+    @SequenceGenerator(name = "su_gen", sequenceName = "seq_user", allocationSize = 1)
+    @GeneratedValue(generator = "su_gen")
     private Integer id;
 
     @Column(name = "user_login")

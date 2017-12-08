@@ -22,12 +22,12 @@
         <p:dialog
                 position="center"
                 widgetVar="login-form"
-                header="Login form"
+                header="Вход в систему"
         >
             <h:panelGrid columns="2">
 
                 <h:column>
-                    Login
+                    Имя пользователя
                 </h:column>
 
                 <h:column>
@@ -35,7 +35,7 @@
                 </h:column>
 
                 <h:column>
-                    password
+                    Пароль
                 </h:column>
 
                 <h:column>
@@ -45,8 +45,8 @@
             </h:panelGrid>
 
             <f:facet name="footer">
-                <p:panel>
-                    <p:commandButton value="Login"/>
+                <p:panel style="text-align: right; border:none">
+                    <p:commandButton value="Войти" action="#{authority.testAuth}"/>
                 </p:panel>
             </f:facet>
 
