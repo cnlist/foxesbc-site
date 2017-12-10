@@ -5,116 +5,18 @@
   Date: 06/12/2017
   Time: 20:08
 -->
-<!DOCTYPE html
-        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="templates/application.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:bc="http://java.sun.com/jsf/composite/bc"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
 
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:bc="http://java.sun.com/jsf/composite/bc"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:h="http://java.sun.com/jsf/html">
-
-<h:head>
-    <title>Ural Foxes BC</title>
-    <link rel="stylesheet" type="text/css" href="default.css"/>
-</h:head>
-
-<h:body>
-    <h:form id="dialogForm">
-        <bc:loginForm/>
-    </h:form>
-
-
-    <div id="outer">
-
-        <div id="upbg"></div>
-
-        <div id="inner">
-
-            <div id="header">
-                <h1>
-                    <h:panelGrid columns="2">
-                        <img src="images/logo.jpg" style="width:130px; top:0; height: 110px"/>
-                        <h:column>
-                            <h:outputText style="color: black; width:100%" value="Бейсболный клуб Ural Foxes"/>
-                        </h:column>
-                    </h:panelGrid>
-                </h1>
-
-            </div>
-
-            <div id="splash">
-
-            </div>
-            <h:form>
-                <div id="menu">
-                    <ul>
-                        <li class="first"><a href="#">Home</a></li>
-                        <li><a href="#">Archives</a></li>
-                        <li><a href="#">Links</a></li>
-                        <li><a href="#">Resources</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><p:commandButton value="login" type="button" onclick="PF('login-form').show()"/></li>
-                    </ul>
-
-                </div>
-
-            </h:form>
-            <div id="primarycontent">
-
-                <!-- primary content start -->
-
-
-                <bc:NewsBlock header="Hабор игроков">
-                    <p>
-                        В данный момент производится набор игроков в команду.<br/>
-                        Мы открыты к партнерским отношениям: поддержка, спонсорство.<br/>
-                        Готовы рассмотреть предложения к сотрудничеству.<br/>
-                    </p>
-                </bc:NewsBlock>
-
-                <!-- primary content end -->
-
-            </div>
-
-            <div id="secondarycontent">
-
-                <!-- secondary content start -->
-
-                <h3>Контакты</h3>
-                <div class="content">
-                    <img src="images/foxes.jpg" class="picB" alt=""/>
-                    <p>
-                        e-mail: <a href="mailto:UralFoxes@mail.ru">UralFoxes@mail.ru</a></p>
-                </div>
-
-                <h3>Topics</h3>
-                <div class="content">
-                    <ul class="linklist">
-                        <li class="first"><a href="#">Accumsan congue (32)</a></li>
-                        <li><a href="#">Dignissim nec augue (14)</a></li>
-                        <li><a href="#">Nunc ante elit nulla (83)</a></li>
-                        <li><a href="#">Aliquam suscipit (74)</a></li>
-                        <li><a href="#">Cursus sed arcu sed (14)</a></li>
-                        <li><a href="#">Eu ante cras at risus (24)</a></li>
-                        <li><a href="#">Donec mollis dolore (39)</a></li>
-                        <li><a href="#">Aliquam suscipit (74)</a></li>
-                    </ul>
-                </div>
-
-                <!-- secondary content end -->
-
-            </div>
-
-            <div id="footer">
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-</h:body>
-
-</html>
+    <ui:define name="primaryContent">
+        <bc:NewsBlock header="Hабор игроков">
+            <p>
+                В данный момент производится набор игроков в команду.<br/>
+                Мы открыты к партнерским отношениям: поддержка, спонсорство.<br/>
+                Готовы рассмотреть предложения к сотрудничеству.<br/>
+            </p>
+        </bc:NewsBlock>
+    </ui:define>
+</ui:composition>

@@ -31,7 +31,7 @@
                 </h:column>
 
                 <h:column>
-                    <p:inputText/>
+                    <p:inputText value="#{authority.login}"/>
                 </h:column>
 
                 <h:column>
@@ -39,14 +39,15 @@
                 </h:column>
 
                 <h:column>
-                    <p:password/>
+                    <p:password value="#{authority.password}"/>
                 </h:column>
 
             </h:panelGrid>
 
             <f:facet name="footer">
                 <p:panel style="text-align: right; border:none">
-                    <p:commandButton value="Войти" action="#{authority.testAuth}"/>
+                    <p:commandButton value="Войти" action="#{authority.logIn}" update="@widgetVar('login-form')"
+                                     oncomplete="PF('login-form').hide()"/>
                 </p:panel>
             </f:facet>
 
