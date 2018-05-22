@@ -11,7 +11,7 @@ CREATE TABLE news_item (
 CREATE SEQUENCE seq_user;
 
 CREATE TABLE site_user (
-  Id          INT UNIQUE DEFAULT nextval('seq_user') PRIMARY KEY,
+  Id          INT
   user_login  TEXT,
   user_passwd BYTEA,
   enabled     BOOLEAN    DEFAULT TRUE
