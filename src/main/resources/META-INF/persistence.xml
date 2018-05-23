@@ -9,5 +9,18 @@
         <class>com.uralfoxes.entity.SystemUser</class>
     </persistence-unit>
 
+    <persistence-unit name="uf_test" transaction-type="RESOURCE_LOCAL">
+        <class>com.uralfoxes.entity.SystemUser</class>
+        <properties>
+        <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+        <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/uralfoxes"/>
+        <property name="javax.persistence.jdbc.user" value="postgres"/>
+        <property name="javax.persistence.jdbc.password" value="POX97fds"/>
+        <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL94Dialect"/>
+        <!--property name="hibernate.hbm2ddl.auto" value="create"/-->
+        <property name="hibernate.show_sql" value="true"/>
+        <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
 
 </persistence>
